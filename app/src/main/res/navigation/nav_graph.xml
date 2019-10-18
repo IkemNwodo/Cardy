@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+        app:startDestination="@id/cardyListFragment">
+
+    <fragment
+            android:id="@+id/cardyListFragment"
+            android:name="nwodo.ikem.com.cardy.ui.list.CardyListFragment"
+            android:label="Cardy"
+            tools:layout="@layout/cardy_list_fragment">
+        <action
+                android:id="@+id/action_cardyListFragment_to_addCardFragment"
+                app:destination="@id/addCardFragment"/>
+    </fragment>
+    <fragment
+            android:id="@+id/addCardFragment"
+            android:name="nwodo.ikem.com.cardy.ui.add.AddCardFragment"
+            android:label="Add Card"
+            tools:layout="@layout/add_card_fragment">
+
+        <argument android:name="cardId"
+                  app:argType="integer"
+                  android:defaultValue="0"/>
+
+    </fragment>
+</navigation>
